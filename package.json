@@ -1,0 +1,11 @@
+{
+  "name": "DragDrop",
+  "description": "",
+  "author": "Aaron Marasco <aaronm67@gmail.com>",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-qunit": "*"
+  }
+}

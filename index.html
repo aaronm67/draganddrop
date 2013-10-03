@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Drag and Drop Demo</title>
+        <script type="text/javascript" src="dragndrop.js"></script>
+        <link rel="stylesheet" href="css/site.css" />
+    </head>
+    <body>
+
+        <div class="demo">
+            <div class="left">
+                <div class="draggable"></div>
+                <div class="draggable"></div>
+                <div class="draggable"></div>
+            </div>
+
+            <div class="right">
+                <div class="droppable"></div>
+                <div class="droppable"></div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript">
+            var initializeDrag = function() {
+                var els = document.querySelectorAll('.draggable');
+                DragAndDrop.initDrag(els, {
+                    start: function(e) {
+                        console.log(e);
+                    },
+                    stop: function(e) {
+                        console.log(e);
+                    },
+
+                    dragClass: 'hover'
+                });
+            }
+
+            var initializeDrop = function() {
+                var els = document.querySelectorAll('.droppable');
+                DragAndDrop.initDrop(els, {
+                    drop: function(e) {
+                        console.log(e);
+                    },
+                    enter: function(e) {
+                        console.log(e);
+                    },
+                    leave: function(e) {
+                        console.log(e);
+                    },
+                    hoverClass: 'hover'
+                });
+            }
+
+            initializeDrag();
+            initializeDrop();
+        </script>
+
+    </body>
+</html>
+
